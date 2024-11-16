@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+   <title>Todo List App - OWL</title>
+
+  <head>
+    <!-- ... -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="./owl.iife.js"></script>
+</head>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-5 py-5">
+            <div class="col-lg-6 offset-lg-3">
+                <h1 class="text-center fw-bold main-title">Todo List App - OWL</h1>
+                <p class="mb-5 text-center h5">Odoo OWL Framework Tutorial for Beginners</p>
+                <div class="m-0 p-4 bg-white rounded">
+    
+                    <div class="input-group-lg bg-white rounded border d-flex w-100 align-items-center">
+                        <input type="name" class="form-control-lg fs-5 flex-fill border-0" placeholder="Add your new task"
+                               aria-label="Add your new task" id="name" name="name" aria-describedby="button-addon2"/>
+                        <input type="color" class="form-control-lg border-0 bg-white m-0 form-control-color" id="color"
+                               value="#563d7c" title="Choose your color"/>
+                        <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-plus-lg fs-3"></i>
+                        </button>
+                    </div>
+    
+                    <ul class="tasks d-flex flex-column p-0 mt-5">
+                        <li class="d-flex align-items-center justify-content-between border-bottom p-3 border rounded mb-2">
+                            <div class="form-check form-switch fs-5 name-dark">
+                                <input class="form-check-input" type="checkbox" value="" role="switch"
+                                       id="flexCheckDefault"/>
+                                <label for="flexCheckDefault">
+                                    Default Checkbox
+                                </label>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary me-2"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
