@@ -21,7 +21,7 @@ class Root extends Component {
 
     <ul class="tasks d-flex flex-column p-0 mt-5">
         <t t-foreach="tasks" t-as="task" t-key="task.id">
-            <Task task="task"/>
+            <Task task="task" onDelete.bind="deleteTask"/>
         </t>
     </ul>
 </div>
@@ -60,6 +60,12 @@ class Root extends Component {
         // reset states after saving
         let state = this.state
         this.state = {...state, name:"", color: "#FFF700"}
+    }
+
+    // delete task
+    deleteTask(task) {
+        const index = this.tasks.findIndex((t) => t.id === task.id);
+        this.tasks.splice(index, 1);
     }
 
 }
