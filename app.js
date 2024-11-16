@@ -16,12 +16,13 @@ class Root extends Component {
 
     <ul class="tasks d-flex flex-column p-0 mt-5">
     <t t-foreach="tasks" t-as="task" t-key="task.id">
-        <li class="d-flex align-items-center justify-content-between border-bottom p-3 border rounded mb-2">
+        <li t-attf-style="background-color:#{task.color}"  class="d-flex align-items-center justify-content-between border-bottom p-3 border rounded mb-2">
             <div class="form-check form-switch fs-5 name-dark">
                 <input class="form-check-input" type="checkbox" value="" role="switch"
-                       id="flexCheckDefault"/>
-                <label for="flexCheckDefault">
-                    Default Checkbox
+                       id="flexCheckDefault"
+                       t-att-id="task.id"/>
+                <label t-att-for="task.id">
+                    <t t-esc="task.name"/>
                 </label>
             </div>
             <div>
@@ -41,7 +42,6 @@ setup(){
       {id:1, name:"Task 1", color:"fff000", isCompleted: false},
       {id:2, name:"Task 2", color:"fff000", isCompleted: false},
       {id:3, name:"Task 3", color:"fff000", isCompleted: false},
-        {id:3, name:"Task 3", color:"fff000", isCompleted: false},
 
     ])
   }
