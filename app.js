@@ -21,7 +21,7 @@ class Root extends Component {
 
     <ul class="tasks d-flex flex-column p-0 mt-5">
         <t t-foreach="tasks" t-as="task" t-key="task.id">
-            <Task task="task" onDelete.bind="deleteTask"/>
+            <Task task="task" onDelete.bind="deleteTask" onEdit.bind="editTask"/>
         </t>
     </ul>
 </div>
@@ -66,6 +66,12 @@ class Root extends Component {
     deleteTask(task) {
         const index = this.tasks.findIndex((t) => t.id === task.id);
         this.tasks.splice(index, 1);
+    }
+
+    // edit task
+    editTask(ta) {
+        const index = this.tasks.findIndex((t) => t.id === ta.id);
+        this.tasks.splice(index, 1, ta)
     }
 
 }
